@@ -1,0 +1,10 @@
+org 100h
+mov al, 'S'
+; Convert to lower-case by adding 32 (20h)
+add al, 20h ; Add 32 to ASCII value
+mov dl, al
+mov ah, 02h
+int 21h
+; Terminate the program
+mov ah, 4Ch
+int 21h
