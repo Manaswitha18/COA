@@ -1,0 +1,10 @@
+org 100h
+mov al,'s'
+; Convert to upper-case by subtracting 32 (20h)
+sub al,20h ; Subtract 32 to get the corresponding upper-case letter
+mov dl,al
+mov ah,02h
+int 21h
+; Terminate the program
+mov ah,4Ch
+int 21h
